@@ -27,11 +27,12 @@ Partial Class frmDevConference
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lblCost = New System.Windows.Forms.Label()
+        Me.txtNumOfMemb = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.radPre = New System.Windows.Forms.RadioButton()
+        Me.radNew = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,28 +86,27 @@ Partial Class frmDevConference
         Me.Label3.Size = New System.Drawing.Size(0, 19)
         Me.Label3.TabIndex = 4
         '
-        'Label4
+        'lblCost
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(294, 523)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(163, 19)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "Total Cost Per Company:"
+        Me.lblCost.AutoSize = True
+        Me.lblCost.Location = New System.Drawing.Point(294, 523)
+        Me.lblCost.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblCost.Name = "lblCost"
+        Me.lblCost.Size = New System.Drawing.Size(0, 19)
+        Me.lblCost.TabIndex = 5
         '
-        'TextBox1
+        'txtNumOfMemb
         '
-        Me.TextBox1.Location = New System.Drawing.Point(429, 116)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(148, 26)
-        Me.TextBox1.TabIndex = 6
+        Me.txtNumOfMemb.Location = New System.Drawing.Point(429, 116)
+        Me.txtNumOfMemb.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtNumOfMemb.Name = "txtNumOfMemb"
+        Me.txtNumOfMemb.Size = New System.Drawing.Size(148, 26)
+        Me.txtNumOfMemb.TabIndex = 6
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.radPre)
+        Me.GroupBox1.Controls.Add(Me.radNew)
         Me.GroupBox1.Location = New System.Drawing.Point(230, 336)
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupBox1.Name = "GroupBox1"
@@ -116,38 +116,48 @@ Partial Class frmDevConference
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Conference Types:"
         '
-        'RadioButton2
+        'radPre
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(69, 90)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(211, 23)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Previous Conference Attendee"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.radPre.AutoSize = True
+        Me.radPre.Location = New System.Drawing.Point(69, 90)
+        Me.radPre.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.radPre.Name = "radPre"
+        Me.radPre.Size = New System.Drawing.Size(211, 23)
+        Me.radPre.TabIndex = 1
+        Me.radPre.TabStop = True
+        Me.radPre.Text = "Previous Conference Attendee"
+        Me.radPre.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'radNew
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(69, 29)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(192, 23)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "New Conference Antendee"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.radNew.AutoSize = True
+        Me.radNew.Location = New System.Drawing.Point(69, 29)
+        Me.radNew.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.radNew.Name = "radNew"
+        Me.radNew.Size = New System.Drawing.Size(192, 23)
+        Me.radNew.TabIndex = 0
+        Me.radNew.TabStop = True
+        Me.radNew.Text = "New Conference Antendee"
+        Me.radNew.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(131, 523)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(163, 19)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Total Cost Per Company:"
         '
         'frmDevConference
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(774, 709)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.txtNumOfMemb)
+        Me.Controls.Add(Me.lblCost)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -169,9 +179,10 @@ Partial Class frmDevConference
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lblCost As Label
+    Friend WithEvents txtNumOfMemb As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents radPre As RadioButton
+    Friend WithEvents radNew As RadioButton
+    Friend WithEvents Label4 As Label
 End Class
